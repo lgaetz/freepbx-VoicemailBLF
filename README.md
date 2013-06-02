@@ -7,11 +7,15 @@ Script that polls all configured Asterisk mailboxes within a user specified voic
 
 
 Requirements:
-FreePBX 2.9 or higher
+* FreePBX 2.9 or higher
+* Tested on Asterisk 1.8, other version will probably work.
+
+Limitations:
+* This script will not work if users are using the ARI to access/delete voicemail. In an environment where voicemail is being accessed by means other than by phone, set up a cron entry to run the script automatically.
 
 Installation:
 * Download the script vmdevstate.php and save it to /var/lib/asterisk/agi-bin/  change ownership to asterisk:asterisk
-* In FreePBX, Voicemail Admin, settings in the field externnotify, add '/var/lib/asterisk/agi-bin/vmdevstate.php' (without quotes)
+* In FreePBX, Voicemail Admin, settings in the field externnotify, add '/var/lib/asterisk/agi-bin/vmdevstate.php' (without quotes) 
 * In /etc/asterisk/extensions_custom.conf under the [from-internal-custom] heading, add a lines like this for each mailbox you need want a hint. Substitue the actual voicemail dial prefix in place of the *98 and the actual extension number:
 
 ```
