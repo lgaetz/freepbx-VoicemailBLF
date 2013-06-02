@@ -12,7 +12,7 @@ FreePBX 2.9 or higher
 Installation:
 * Download the script vmdevstate.php and save it to /var/lib/asterisk/agi-bin/  change ownership to asterisk:asterisk
 * In FreePBX, Voicemail Admin, settings in the field externnotify, add '/var/lib/asterisk/agi-bin/vmdevstate.php' (without quotes)
-* In /etc/asterisk/extensions_custom.conf under the [from-internal-custom] heading, add a lines like this for each mailbox you want a hint for:
+* In /etc/asterisk/extensions_custom.conf under the [from-internal-custom] heading, add a lines like this for each mailbox you want a hint for. Substitue the actual voicemail dial prefix in place of the *98:
 
 ```
 [from-internal-custom]
