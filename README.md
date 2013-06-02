@@ -12,6 +12,7 @@ Requirements:
 
 Limitations:
 * This script will not work if users are using the ARI to access/delete voicemail. In an environment where voicemail is being accessed by means other than by phone, set up a cron entry to run the script automatically.
+* There are many projects that take advantage of the voicemail `externnotify` variable, it can only be used to call one script. If the `externnotify` field is already populated in Voicemail Admin, you may break existing functionality by replacing it.
 
 Installation:
 * Download the script vmdevstate.php and save it to /var/lib/asterisk/agi-bin/  change ownership to asterisk:asterisk
