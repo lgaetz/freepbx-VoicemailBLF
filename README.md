@@ -3,7 +3,7 @@ Voicmail BLF
 
 version 0.0.1
 
-Script that polls all configured mailboxes, and sets a custom device state for each reflecting if there are messages waiting or not. The device states can be monitored by setting hints manually in extensions_custom.conf and BLF buttons on phones can be programmed to show the Voice mailbox status.
+Script that polls all configured Asterisk mailboxes within a user specified voicemail context, and sets a custom device state for each reflecting if there are messages waiting or not. The device states can then be monitored by setting hints manually in extensions_custom.conf and BLF buttons on phones can be programmed to show the Voice mailbox status. Suitable for setups with a common shared voicemail box or for boss/secretary environment where a voicemail box is managed by an assistant.
 
 
 Requirements:
