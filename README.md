@@ -15,6 +15,8 @@ Installation:
 * In /etc/asterisk/extensions_custom.conf under the [from-internal-custom] heading, add a lines like this for each mailbox you want a hint for:
 
 ```
+[from-internal-custom]
+
 ; set voicemail hint for ext 201
 exten => *98201,hint,Custom:MWI201
 
