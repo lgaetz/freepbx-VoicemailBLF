@@ -15,8 +15,9 @@
 //    along with FreePBX.  If not, see <http://www.gnu.org/licenses/>.
 //
 // Copyright (C) 2013 PBX Open Source Software Alliance
-// Version 0.0.1 issued by lgaetz June 1, 2013
-
+// Version History
+// 0.0.1 issued by lgaetz June 1, 2013
+// 0.0.2 issued by lgaetz June 3, 2013
 
 
 //************** User configuration options *****************
@@ -42,6 +43,8 @@ if (!@include_once(getenv('FREEPBX_CONF') ? getenv('FREEPBX_CONF') : '/etc/freep
 
 // capture output from asterisk command "voicemail show users for default"
 $rawvalue = $astman->command('voicemail show users for '.$vmcontext);
+//print_r( $rawvalue);
+$rawvalue['data'] = preg_replace ( "/[\d]*? voicemail users configured\./" , " " , $rawvalue['data']); 
 
 // convert raw asterisk output into 2D array of extension mailboxes and number of messages waiting
 // this parses output from Asterisk 1.8, may or may not work on later versions.
